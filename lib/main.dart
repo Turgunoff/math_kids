@@ -19,16 +19,17 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
-        providers: [
-          ChangeNotifierProvider(create: (_) => LoadingProvider()),
-          ChangeNotifierProvider(create: (_) => PlusProvider()),
-        ],
-        child: MaterialApp(
-          debugShowCheckedModeBanner: false,
-          theme: ThemeData(
-              primarySwatch: Colors.teal,
-              appBarTheme: const AppBarTheme(centerTitle: true)),
-          home: const SplashScreen(),
-        ));
+      providers: [
+        ChangeNotifierProvider(create: (_) => LoadingProvider()),
+        ChangeNotifierProvider(create: (_) => PlusProvider()),
+      ],
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(
+            primarySwatch: Colors.teal,
+            appBarTheme: const AppBarTheme(centerTitle: true)),
+        home: const SplashScreen(),
+      ),
+    );
   }
 }
